@@ -3,11 +3,13 @@ SignalRF
 
 *A Flex/AS3 implmentation of the SignalR Client*
 
-Currently supports version 2.0.X of SignalR.
+Currently supports version 2.0.x of SignalR.
 
 Explanation
 -----------
 So, this is the first pass at creating a Flex/AS3 SWC SignalR Client. It works very similarly to the .NET client.
+
+*I appologize for there not being any test project(s), but when I started this I didnt think it through so my backend signalR stuff isnt appropriate for posting as a generic testing/demo piece*
 
 It only supports the WebSocket transport at this point. Why? Because that is what I needed and I dont have time to code any other transport type at the moment. 
 
