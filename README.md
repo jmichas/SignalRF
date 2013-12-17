@@ -1,7 +1,7 @@
 SignalRF
 ========
 
-*A Flex/AS3 implmentation of the SignalR Client*
+*A Flex/AS3 implementation of the SignalR Client*
 
 Currently supports version 2.0.x of SignalR.
 
