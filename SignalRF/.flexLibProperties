@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="true" version="3">
+  <includeClasses>
+    <classEntry path="com.michas.signalRF.Connection"/>
+    <classEntry path="com.michas.signalRF.Credentials"/>
+    <classEntry path="com.michas.signalRF.HeartbeatMonitor"/>
+    <classEntry path="com.michas.signalRF.HubConnection"/>
+    <classEntry path="com.michas.signalRF.IConnection"/>
+    <classEntry path="com.michas.signalRF.IHubProxy"/>
+    <classEntry path="com.michas.signalRF.KeepAliveData"/>
+    <classEntry path="com.michas.signalRF.LibVersion"/>
+    <classEntry path="com.michas.signalRF.NegotiationResponse"/>
+    <classEntry path="com.michas.signalRF.enums.AbstractEnumerable"/>
+    <classEntry path="com.michas.signalRF.enums.ConnectionState"/>
+    <classEntry path="com.michas.signalRF.events.SignalRReceivedEvent"/>
+    <classEntry path="com.michas.signalRF.http.IHttpClient"/>
+    <classEntry path="com.michas.signalRF.http.IRequest"/>
+    <classEntry path="com.michas.signalRF.http.IResponse"/>
+    <classEntry path="com.michas.signalRF.hubs.HubException"/>
+    <classEntry path="com.michas.signalRF.hubs.HubInvocation"/>
+    <classEntry path="com.michas.signalRF.hubs.HubProxy"/>
+    <classEntry path="com.michas.signalRF.hubs.HubResult"/>
+    <classEntry path="com.michas.signalRF.hubs.IHubConnection"/>
+    <classEntry path="com.michas.signalRF.hubs.Subscription"/>
+    <classEntry path="com.michas.signalRF.infrastructure.CancellationToken"/>
+    <classEntry path="com.michas.signalRF.interfaces.IDisposable"/>
+    <classEntry path="com.michas.signalRF.interfaces.ISignalRObject"/>
+    <classEntry path="com.michas.signalRF.tasks.EmptyTask"/>
+    <classEntry path="com.michas.signalRF.tasks.MessageReceivedTask"/>
+    <classEntry path="com.michas.signalRF.tasks.TaskCommands"/>
+    <classEntry path="com.michas.signalRF.tasks.TaskNegotiate"/>
+    <classEntry path="com.michas.signalRF.tasks.events.TaskEvent"/>
+    <classEntry path="com.michas.signalRF.tasks.queue.AbstractQueueTask"/>
+    <classEntry path="com.michas.signalRF.tasks.queue.HashTable"/>
+    <classEntry path="com.michas.signalRF.tasks.queue.IQueueTask"/>
+    <classEntry path="com.michas.signalRF.tasks.queue.IQueueTaskGroup"/>
+    <classEntry path="com.michas.signalRF.tasks.queue.PriorityQueue"/>
+    <classEntry path="com.michas.signalRF.tasks.queue.Queue"/>
+    <classEntry path="com.michas.signalRF.tasks.queue.QueueTaskGroup"/>
+    <classEntry path="com.michas.signalRF.tasks.queue.TaskController"/>
+    <classEntry path="com.michas.signalRF.transports.IClientTransport"/>
+    <classEntry path="com.michas.signalRF.transports.TransportHelpers"/>
+    <classEntry path="com.michas.signalRF.transports.websockets.WebSocketTransport"/>
+    <classEntry path="com.michas.signalRF.transports.websockets.WebSocketWrapperRequest"/>
+    <classEntry path="com.michas.signalRF.types.SignalRObject"/>
+    <classEntry path="com.michas.signalRF.utils.CookieContainer"/>
+    <classEntry path="com.michas.signalRF.utils.ICredentials"/>
+    <classEntry path="com.michas.signalRF.utils.TraceLevels"/>
+    <classEntry path="com.michas.signalRF.utils.Version"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
