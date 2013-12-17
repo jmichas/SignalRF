@@ -40,50 +40,50 @@ Objects passed to signalR must extend from the SignalRObject class. This is used
 Example Code
 --------
     
-    //create new connection
-    var signalRF:HubConnection = new HubConnection();
-    
-    //listen for state changes
-    signalRF.addEventListener(SignalREvent.STATE_CHANGED, function(e:SignalRStateChangedEvent):void{
-    			trace(e.newState.toString());
-    		});
-    
-    //*this varies from the normal clients where this is passed int he constructor
-    //initialize the connection, change the URL to your signalR endpoint
-    signalRF.init("http://my.testlab.dev/signalr",null,true);
-    
-    //if your endpoint requires authentication you can do this in one of two ways
-    // set a bearer token, useful for the new ASP.Net identity OWIN OAuth stuff
-    //signalRF.headers["Authorization"] = "Bearer " + token;
-    //OR
-    // set credentials that will activate the Basic Auth token header
-		//signalRF.credentials = new Credentials("test","password");
-		
-		//create a new hub proxy
-		var gamehub:IHubPorxy = signalRF.createHubProxy("gameHub");
-		
-		//Start the connection
-		// this uses the async task framework to allow chained notation such as .await() .continueWith()
-		// see the async documentation for more info [AS3-Async-Tasks](https://github.com/Strilanc/AS3-Async-Tasks)
-		signalRF.start().await(function():void{
-			if(signalRF.state == ConnectionState.CONNECTED){
-				trace("start complete");
-			}
-		});
-		
-		//Once the connection is open you can call methods on the server by using
-		// you can see the faked generics here with invoke$T where the second argument
-		// is the class "Game" which extends SignalRObject.
-		gamehub.invoke$T("findGame",Game,false, game).continueWith(function(result:*):void{
-			game = result as Game;
-      // do something
-		});
-		
-		//To allow the server to call methods on the client use
-		gamehub.on("updateGame",Game, function(model:Game):void{
-			game = model;
-			// do seomthing
-		});
-		
-		//and to stop the server from calling client methods
-		gamehub.off("updateGame");
+	//create new connection
+	var signalRF:HubConnection = new HubConnection();
+	
+	//listen for state changes
+	signalRF.addEventListener(SignalREvent.STATE_CHANGED, function(e:SignalRStateChangedEvent):void{
+    		trace(e.newState.toString());
+    	});
+	
+	//*this varies from the normal clients where this is passed int he constructor
+	//initialize the connection, change the URL to your signalR endpoint
+	signalRF.init("http://my.testlab.dev/signalr",null,true);
+	
+	//if your endpoint requires authentication you can do this in one of two ways
+	// set a bearer token, useful for the new ASP.Net identity OWIN OAuth stuff
+	//signalRF.headers["Authorization"] = "Bearer " + token;
+		//OR
+	// set credentials that will activate the Basic Auth token header
+	//signalRF.credentials = new Credentials("test","password");
+	
+	//create a new hub proxy
+	var gamehub:IHubPorxy = signalRF.createHubProxy("gameHub");
+	
+	//Start the connection
+	// this uses the async task framework to allow chained notation such as .await() .continueWith()
+	// see the async documentation for more info [AS3-Async-Tasks](https://github.com/Strilanc/AS3-Async-Tasks)
+	signalRF.start().await(function():void{
+		if(signalRF.state == ConnectionState.CONNECTED){
+			trace("start complete");
+		}
+	});
+	
+	//Once the connection is open you can call methods on the server by using
+	// you can see the faked generics here with invoke$T where the second argument
+	// is the class "Game" which extends SignalRObject.
+	gamehub.invoke$T("findGame",Game,false, game).continueWith(function(result:*):void{
+		game = result as Game;
+		// do something
+	});
+	
+	//To allow the server to call methods on the client use
+	gamehub.on("updateGame",Game, function(model:Game):void{
+		game = model;
+		// do seomthing
+	});
+	
+	//and to stop the server from calling client methods
+	gamehub.off("updateGame");
