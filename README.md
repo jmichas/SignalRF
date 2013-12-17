@@ -62,7 +62,7 @@ Example Code
 	//signalRF.credentials = new Credentials("test","password");
 	
 	//create a new hub proxy
-	var gamehub:IHubPorxy = signalRF.createHubProxy("gameHub");
+	var gamehub:IHubProxy = signalRF.createHubProxy("gameHub");
 	
 	//Start the connection
 	// this uses the async task framework to allow chained notation such as .await() .continueWith()
