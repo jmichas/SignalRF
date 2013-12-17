@@ -37,7 +37,7 @@ The release version of the SignalRF.swc can be found in release-bin.
 Usage
 --------
 *Caveat*
-Objects passed to signalR must extend from the SignalRObject class. This is used to facilitate type generics on AS3 since there is no JSON decode to <T> in AS3. My solution was to pass the T into the method as a paramaeter and then the base code uses this to parse the JSON received and create that "dynamic" class to be returned to the user code.
+Objects passed to signalR must extend from the SignalRObject class. This is used to facilitate type generics on AS3 since there is no JSON decode to &lt;T&gt; in AS3. My solution was to pass the T into the method as a paramaeter and then the base code uses this to parse the JSON received and create that "dynamic" class to be returned to the user code.
 
 Example Code
 --------
